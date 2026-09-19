@@ -1,20 +1,24 @@
 [gd_scene format=3 uid="uid://155xx7s6y6ta"]
 
 [ext_resource type="PackedScene" uid="uid://be8qbmt0fe144" path="res://Scenes/player.tscn" id="1_bo1nx"]
-[ext_resource type="PackedScene" uid="uid://biltx0eelmwee" path="res://Scenes/ennemy.tscn" id="2_8gbba"]
+[ext_resource type="Script" uid="uid://bjgr27ylosya8" path="res://Scenes/main_camera.gd" id="2_jjvhh"]
 [ext_resource type="PackedScene" uid="uid://bwh2ryygpvbyx" path="res://Scenes/level1.tscn" id="3_8gbba"]
+[ext_resource type="PackedScene" uid="uid://jlbtcblrpx2r" path="res://Scenes/ennemy_orc.tscn" id="4_jjvhh"]
 
 [node name="Main" type="Node2D" unique_id=234138639]
 
 [node name="Level1" parent="." unique_id=492843449 instance=ExtResource("3_8gbba")]
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=2028523729]
+[node name="MainCamera" type="Camera2D" parent="." unique_id=2028523729]
 position = Vector2(118, 82)
 zoom = Vector2(3, 3)
+script = ExtResource("2_jjvhh")
+zoomSpeed = 0.1
+moveSpeed = 50.0
 
 [node name="Player" parent="." unique_id=2011704551 instance=ExtResource("1_bo1nx")]
 position = Vector2(89, 59)
 
-[node name="Ennemy" parent="." unique_id=1023547832 instance=ExtResource("2_8gbba")]
-position = Vector2(151, 84)
-scale = Vector2(1.5, 1.5)
+[node name="EnnemyOrc" parent="." unique_id=512808826 instance=ExtResource("4_jjvhh")]
+position = Vector2(133, 67)
+scale = Vector2(0.8, 0.8)
