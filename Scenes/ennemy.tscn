@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://biltx0eelmwee"]
+
+[ext_resource type="Texture2D" uid="uid://cmtpbml3dkcmv" path="res://sprites/Rogue Animationset/Idle/IdleAnimation1.png" id="1_y511a"]
+[ext_resource type="Texture2D" uid="uid://dwhfpkv3utkav" path="res://sprites/Rogue Animationset/Idle/IdleAnimation2.png" id="2_p8mdu"]
+[ext_resource type="Texture2D" uid="uid://dkf4kblll2n70" path="res://sprites/Rogue Animationset/Idle/IdleAnimation3.png" id="3_cf0s2"]
+[ext_resource type="Texture2D" uid="uid://bdunrxfl1f7ax" path="res://sprites/Rogue Animationset/Idle/IdleAnimation4.png" id="4_cmqsp"]
+[ext_resource type="Texture2D" uid="uid://dim5sk14k87d1" path="res://sprites/Rogue Animationset/Idle/IdleAnimation5.png" id="5_ygv0l"]
+[ext_resource type="Texture2D" uid="uid://cprugjpnnp1w8" path="res://sprites/Rogue Animationset/Idle/IdleAnimation6.png" id="6_cbaa5"]
+[ext_resource type="Texture2D" uid="uid://b6yq0jrycwrlq" path="res://sprites/Rogue Animationset/Idle/IdleAnimation7.png" id="7_lvslp"]
+[ext_resource type="Texture2D" uid="uid://bmhmet70g08sj" path="res://sprites/Rogue Animationset/Idle/IdleAnimation8.png" id="8_ar5aj"]
+[ext_resource type="Texture2D" uid="uid://3hjhxm0ou1uu" path="res://sprites/Rogue Animationset/Idle/IdleAnimation9.png" id="9_qieg8"]
+[ext_resource type="Texture2D" uid="uid://cjbhqyv4ipd2b" path="res://sprites/Rogue Animationset/Idle/IdleAnimation10.png" id="10_5oeu0"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_r0fs1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_y511a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_p8mdu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_cf0s2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_cmqsp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ygv0l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_cbaa5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_lvslp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ar5aj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_qieg8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_5oeu0")
+}],
+"loop": 1,
+"name": &"idle_down",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kufma"]
+radius = 5.0
+height = 18.0
+
+[node name="Ennemy" type="CharacterBody2D" unique_id=1023547832]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2085869742]
+sprite_frames = SubResource("SpriteFrames_r0fs1")
+animation = &"idle_down"
+autoplay = "idle_down"
+frame_progress = 0.9031902
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1539876656]
+position = Vector2(0, 5)
+shape = SubResource("CapsuleShape2D_kufma")
